@@ -1,0 +1,9 @@
+Artificial intelligence studies agents that perceive environments and take actions to achieve goals. Machine learning learns patterns from data instead of relying on hand-written rules. Supervised learning uses labeled examples while unsupervised learning discovers structure in unlabeled datasets.
+
+Neural networks stack layers of weighted connections and nonlinear activations. Deep learning scaled these models with GPUs and large datasets. Convolutional networks excel at image recognition while recurrent and transformer architectures process sequences and language.
+
+Natural language processing enables machines to understand and generate text. Tokenization, embeddings, and attention mechanisms represent meaning numerically. Large language models predict next tokens and support translation, summarization, and question answering.
+
+Computer vision detects objects, segments regions, and estimates depth from images. Reinforcement learning trains agents through rewards in simulated or real environments. Recommendation systems combine collaborative filtering with content features.
+
+Responsible artificial intelligence requires fairness, transparency, and safety reviews. Bias in training data can harm marginalized groups. Explainability tools help practitioners interpret complex models. Robust evaluation prevents overfitting and measures generalization to new situations.

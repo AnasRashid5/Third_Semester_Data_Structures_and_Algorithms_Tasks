@@ -1,0 +1,19 @@
+Physics is the natural science that studies matter, energy, space, and time, and the fundamental forces governing their interactions. From the subatomic to the cosmological scale, physics provides the deepest quantitative description of reality known to humanity.
+
+Classical mechanics describes the motion of macroscopic objects under the influence of forces. Newton's three laws of motion form its foundation. The first law states that objects remain at rest or in uniform motion unless acted upon by an external force. The second law relates force, mass, and acceleration. The third law requires that every action has an equal and opposite reaction.
+
+Thermodynamics studies the relationship between heat, work, and energy. The zeroth law defines thermal equilibrium and temperature. The first law is conservation of energy, stating that the total energy of an isolated system is constant. The second law introduces entropy and the arrow of time, forbidding spontaneous heat flow from cold to hot. The third law establishes that entropy approaches a minimum as temperature approaches absolute zero.
+
+Electromagnetism describes the behavior of electric charges and magnetic fields. Maxwell's equations unify electricity, magnetism, and light into a single framework. Coulomb's law governs the force between stationary charges. Faraday's law of induction describes how changing magnetic fields generate electric fields. The wave equation derived from Maxwell's equations predicts electromagnetic waves traveling at the speed of light.
+
+Special relativity revolutionized understanding of space and time. Einstein's postulates that the laws of physics are identical in all inertial frames and that the speed of light is constant in a vacuum lead to time dilation, length contraction, and the equivalence of mass and energy expressed by the formula relating energy, mass, and the speed of light squared.
+
+General relativity extends special relativity to include gravity. Massive objects curve the fabric of spacetime, and this curvature determines the paths of objects and light. Black holes are regions where gravity is so intense that nothing, not even light, can escape. Gravitational waves, ripples in spacetime caused by accelerating masses, were directly detected by laser interferometers in 2015.
+
+Quantum mechanics governs the behavior of particles at atomic and subatomic scales. The wave function encodes the probability amplitude for all possible measurement outcomes. The uncertainty principle limits simultaneous precision in conjugate variables like position and momentum. Superposition allows particles to exist in combinations of multiple states until measured. Entanglement correlates particles across arbitrary distances.
+
+Particle physics catalogues the fundamental constituents of matter and the forces between them in the Standard Model. Quarks combine to form protons, neutrons, and other hadrons. Leptons include electrons and neutrinos. Bosons mediate the strong, weak, and electromagnetic forces. The Higgs boson gives other particles mass through interaction with the Higgs field.
+
+Condensed matter physics studies the collective behavior of large numbers of atoms and electrons. Superconductivity allows certain materials to conduct electricity with zero resistance below a critical temperature. Semiconductors enable transistors by controlled doping of silicon crystals. Topological materials exhibit exotic surface states protected against disorder by topological invariants.
+
+Cosmology investigates the origin, evolution, and large-scale structure of the universe. The Big Bang model describes the universe as beginning in an extraordinarily hot dense state and expanding and cooling over billions of years. Dark matter accounts for most matter in galaxies but has not yet been directly detected. Dark energy drives the accelerating expansion of the universe.

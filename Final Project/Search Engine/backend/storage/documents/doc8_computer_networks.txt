@@ -1,0 +1,9 @@
+Computer networks connect devices using layered protocols. The internet protocol suite includes link, network, transport, and application layers. Packets carry addresses and payloads across routers and switches. Transmission control protocol provides reliable ordered delivery while user datagram protocol favors low latency.
+
+Internet protocol version four uses thirty-two bit addresses while version six expands address space dramatically. Domain name system translates human readable hostnames into addresses. Dynamic host configuration protocol assigns addresses automatically on local networks.
+
+Hypertext transfer protocol relies on sockets and ports such as eighty and four forty-three. Application programming interfaces abstract socket programming for developers. Firewalls filter traffic using rules and intrusion detection monitors suspicious patterns.
+
+Wireless networks use Wi-Fi standards with access points and encryption protocols. Ethernet remains dominant in data centers with high-speed links. Software-defined networking separates control planes from forwarding hardware.
+
+Latency, bandwidth, and packet loss determine user experience. Content delivery networks replicate caches globally. Peer-to-peer systems distribute files without central servers. Network security combines encryption, authentication, and authorization to protect data in transit.

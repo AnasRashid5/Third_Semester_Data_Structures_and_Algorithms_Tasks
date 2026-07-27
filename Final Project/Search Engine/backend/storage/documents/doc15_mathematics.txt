@@ -1,0 +1,19 @@
+Mathematics is the abstract study of quantity, structure, space, and change. It provides the logical foundation for all quantitative sciences and engineering disciplines. Pure mathematics investigates mathematical structures for their own sake, while applied mathematics develops tools to solve problems in physics, economics, computer science, and biology.
+
+Number theory explores the properties of integers and prime numbers. The fundamental theorem of arithmetic states that every integer greater than one has a unique prime factorization. Prime numbers are integers divisible only by one and themselves. The distribution of primes among integers grows sparser as numbers grow larger, a pattern described by the prime number theorem.
+
+Calculus studies continuous change through differentiation and integration. The derivative of a function measures the instantaneous rate of change at any point. The integral accumulates infinitesimally small quantities to compute areas, volumes, and total accumulated change. The fundamental theorem of calculus establishes that differentiation and integration are inverse operations.
+
+Linear algebra studies vector spaces and linear transformations between them. Vectors represent quantities with both magnitude and direction. Matrices encode linear transformations and can be composed through multiplication. Eigenvalues and eigenvectors reveal the intrinsic stretching directions of a transformation, fundamental to principal component analysis and differential equations.
+
+Probability theory formalizes uncertainty using measures on a sample space. Events are subsets of outcomes, and probabilities are non-negative real numbers summing to one. The law of large numbers shows that the sample mean converges to the expected value as sample size grows. The central limit theorem explains why sums of independent random variables tend toward normal distributions.
+
+Discrete mathematics deals with finite and countable structures. Graph theory models relationships between objects using vertices and edges. Trees, cycles, paths, and connectivity are core graph-theoretic concepts. Combinatorics counts arrangements and selections, computing factorials, binomial coefficients, and generating functions to enumerate complex structures.
+
+Topology studies properties that are preserved under continuous deformations. Two shapes are topologically equivalent if one can be deformed into the other without tearing or gluing. The Euler characteristic relates vertices, edges, and faces of polyhedra. Algebraic topology assigns algebraic invariants like homology groups to topological spaces.
+
+Abstract algebra generalizes arithmetic operations to arbitrary sets equipped with operations satisfying axioms. Groups capture the essence of symmetry. Rings generalize integers by allowing addition and multiplication. Fields further allow division, enabling polynomials and linear algebra over any field including the real and complex numbers.
+
+Mathematical logic underpins formal proof systems and computability theory. Propositional and predicate logic define syntax and semantics for formal statements. Godel completeness and incompleteness theorems reveal both the power and limitations of formal axiomatic systems. The halting problem demonstrates that no algorithm can decide in general whether a program terminates.
+
+Numerical analysis develops algorithms for approximating mathematical objects and solving equations computationally. Floating-point arithmetic introduces rounding errors that can accumulate in iterative algorithms. Numerical stability ensures that errors remain bounded. Finite element methods discretize differential equations into algebraic systems solvable by linear algebra techniques.

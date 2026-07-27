@@ -1,0 +1,9 @@
+Programming languages express algorithms with syntax and semantics understood by compilers or interpreters. Imperative languages emphasize statements that mutate state. Declarative languages describe desired outcomes with logic or functions. Object-oriented design groups data and behavior into classes with inheritance and polymorphism.
+
+Static type systems catch errors at compile time while dynamic typing defer checks until runtime. Type inference reduces boilerplate in modern languages. Memory management strategies include manual allocation, garbage collection, and ownership models that enforce lifetimes.
+
+Functional programming treats computation as evaluation of mathematical functions. Higher-order functions, immutable data, and pattern matching simplify complex transformations. Closures capture environments for callbacks and asynchronous workflows.
+
+Compilers parse source code into abstract syntax trees then perform semantic analysis. Intermediate representations enable optimization passes such as constant folding and inlining. Linkers combine object files and resolve symbols across modules.
+
+Interpreters execute programs directly or compile to bytecode for virtual machines. Just-in-time compilation blends flexibility with performance. Domain-specific languages target narrow problems like SQL for queries or HTML for documents. Open source communities drive rapid evolution across the language ecosystem.

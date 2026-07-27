@@ -1,0 +1,19 @@
+Cybersecurity is the practice of protecting computers, networks, programs, and data from unauthorized access, damage, or attack. As organizations rely increasingly on digital infrastructure, the attack surface grows and the stakes of a breach rise dramatically.
+
+Confidentiality ensures that information is accessible only to those authorized to access it. Encryption transforms plaintext into ciphertext using mathematical algorithms and keys. Symmetric encryption uses the same key for encryption and decryption, while asymmetric encryption uses a public-private key pair. The advanced encryption standard is widely adopted for data at rest and in transit.
+
+Integrity guarantees that data has not been tampered with or altered without authorization. Cryptographic hash functions produce a fixed-size digest from any input, and any change to the input produces a completely different digest. Message authentication codes and digital signatures combine hashing with keys to provide both integrity and authentication.
+
+Availability means that systems and data are accessible to authorized users when needed. Denial-of-service attacks flood servers with traffic to exhaust resources. Distributed denial-of-service attacks coordinate thousands of compromised machines. Content delivery networks, rate limiting, and anycast routing mitigate volumetric floods.
+
+Authentication verifies the identity of users and systems. Passwords remain the most common factor but are vulnerable to guessing, phishing, and credential stuffing. Multi-factor authentication adds possession of a physical token or biometric verification. Single sign-on systems reduce password fatigue while centralized identity providers improve auditability.
+
+Network security encompasses firewalls, intrusion detection systems, virtual private networks, and network segmentation. Firewalls inspect packets and enforce rules controlling which traffic may enter or leave a network. Intrusion detection systems analyze traffic patterns to identify anomalies. Zero-trust architecture requires strict verification for every request regardless of network location.
+
+Malware is malicious software designed to damage systems or exfiltrate data. Viruses attach to legitimate files and spread when executed. Worms propagate across networks without user interaction. Ransomware encrypts victim files and demands payment for decryption keys. Spyware silently monitors user activity and transmits collected data to attackers.
+
+Social engineering exploits human psychology rather than technical vulnerabilities. Phishing emails impersonate trusted organizations to steal credentials. Spear-phishing targets specific individuals with personalized lures. Vishing attacks use voice calls, and smishing uses text messages. Security awareness training reduces susceptibility to these techniques.
+
+Penetration testing simulates attacks to discover vulnerabilities before adversaries do. Ethical hackers perform reconnaissance, scanning, exploitation, and post-exploitation activities under authorized agreements. Bug bounty programs reward external researchers for responsibly disclosing vulnerabilities.
+
+Incident response defines the process for detecting, containing, eradicating, and recovering from security breaches. Security information and event management systems aggregate logs and generate alerts. Digital forensics preserves evidence and reconstructs attack timelines. Regulatory frameworks such as GDPR mandate breach notification within specific timeframes.

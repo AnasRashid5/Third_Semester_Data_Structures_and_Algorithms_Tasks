@@ -1,0 +1,537 @@
+:root {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --ink: #1d1b2e;
+  --ink-soft: #5f5c72;
+  --border: #e6e3dd;
+  --c1: #4f46e5; /* indigo */
+  --c2: #9333ea; /* violet */
+  --c3: #0d9488; /* teal */
+  --c4: #d97706; /* amber */
+  --ring: rgba(79, 70, 229, 0.15);
+  --radius: 26px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* subtle ambient texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(79,70,229,0.05), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(147,51,234,0.05), transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 20px 32px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  position: relative;
+  z-index: 1;
+}
+
+header a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+header a:hover,
+header a:focus-visible {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 8vh;
+  position: relative;
+  z-index: 1;
+  transition: justify-content 0.2s ease;
+}
+
+main.has-results {
+  justify-content: flex-start;
+  padding-top: 48px;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(48px, 9vw, 76px);
+  letter-spacing: -0.03em;
+  margin: 0 0 36px;
+  user-select: none;
+  display: flex;
+}
+
+.logo span {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(.34,1.56,.64,1);
+}
+
+.logo:hover span {
+  animation: bounce 0.5s cubic-bezier(.34,1.56,.64,1);
+}
+
+.logo span:nth-child(1) { color: var(--c1); }
+.logo span:nth-child(2) { color: var(--c2); }
+.logo span:nth-child(3) { color: var(--ink); }
+.logo span:nth-child(4) { color: var(--c3); }
+.logo span:nth-child(5) { color: var(--c4); }
+.logo span:nth-child(6) { color: var(--c2); }
+.logo span:nth-child(7) { color: var(--c1); }
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.search-wrap {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  box-shadow: 0 1px 2px rgba(29,27,46,0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px var(--ring), 0 4px 16px rgba(29,27,46,0.06);
+}
+
+.search-box svg.icon-search {
+  flex-shrink: 0;
+  color: var(--ink-soft);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background: transparent;
+  min-width: 0;
+}
+
+.search-box input::placeholder {
+  color: #a8a5b8;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-soft);
+  display: none;
+  padding: 4px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.clear-btn.visible { display: flex; }
+.clear-btn:hover { background: var(--bg); }
+
+/* Autocomplete dropdown (empty placeholder) */
+.autocomplete {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(29,27,46,0.08);
+  overflow: hidden;
+  z-index: 5;
+  display: none;
+}
+
+.autocomplete.open { display: block; }
+
+.autocomplete ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+}
+
+.autocomplete li {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.autocomplete li:hover,
+.autocomplete li.active {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.autocomplete .empty-state {
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #b3b0c2;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+button.action-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 22px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  /* ISSUE FIX: Added flex layout so the clock SVG icon inside the History
+     button sits inline with the button text without extra spacing hacks. */
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+button.action-btn:hover,
+button.action-btn:focus-visible {
+  border-color: var(--c1);
+  color: var(--c1);
+  box-shadow: 0 2px 8px rgba(79,70,229,0.1);
+}
+
+button.action-btn.primary {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(120deg, var(--c1), var(--c2));
+}
+
+button.action-btn.primary:hover {
+  filter: brightness(1.08);
+  color: #fff;
+}
+
+/* Results section */
+.results {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 40px;
+  display: none;
+}
+
+.results.visible { display: block; }
+
+.results-meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.result-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.result-item:last-child { border-bottom: none; }
+
+.result-item .url {
+  font-size: 13px;
+  color: var(--c3);
+  margin-bottom: 4px;
+}
+
+.result-item .title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--c1);
+  margin: 0 0 6px;
+  cursor: pointer;
+}
+
+.result-item .title:hover { text-decoration: underline; }
+
+.result-item .snippet {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.empty-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-soft);
+}
+
+.empty-results .glyph {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+footer {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 18px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  position: relative;
+  z-index: 1;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+footer a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  header { padding: 14px 16px; gap: 8px; font-size: 13px; }
+  .logo { margin-bottom: 24px; }
+  .search-box { padding: 12px 16px; border-radius: 20px; }
+  .search-box input { font-size: 16px; }
+  button.action-btn { padding: 10px 16px; font-size: 13px; }
+  .result-item .title { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ── History panel ───────────────────────────────────────────────────────── */
+/* ISSUE FIX: The history panel (aside#historyPanel) did not exist in CSS.
+   Added slide-in animation, layout, and interactive item styles so the
+   History button has a polished, functional panel to open. */
+.history-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  max-width: 92vw;
+  height: 100vh;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -8px 0 32px rgba(29,27,46,0.08);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+  /* Hidden by default – JS adds .open to slide it in */
+}
+
+.history-panel.open {
+  transform: translateX(0);
+}
+
+.history-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.history-panel-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-soft);
+  font-size: 22px;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.history-panel-header button:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 20px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+  border-radius: 0;
+}
+
+.history-item:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.history-item svg {
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.history-item:hover svg {
+  opacity: 1;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 13px;
+  color: #b3b0c2;
+  margin: 0;
+}
+
+/* ── Document Modal ──────────────────────────────────────────────────────── */
+/* ISSUE FIX: Styles for the document viewing modal. */
+.doc-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(29, 27, 46, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.doc-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.doc-modal-content {
+  background: var(--surface);
+  width: 90%;
+  max-width: 800px;
+  height: 80vh;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  transform: translateY(20px);
+  transition: transform 0.2s ease;
+}
+
+.doc-modal.open .doc-modal-content {
+  transform: translateY(0);
+}
+
+.doc-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-modal-header h2 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.doc-modal-header button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  line-height: 1;
+}
+
+.doc-modal-header button:hover {
+  color: var(--ink);
+}
+
+.doc-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.doc-modal-body pre {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--ink);
+}

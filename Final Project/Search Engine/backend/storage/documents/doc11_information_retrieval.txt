@@ -1,0 +1,9 @@
+Information retrieval finds relevant documents for user queries at scale. Inverted indexes map terms to posting lists with document identifiers and frequencies. Boolean retrieval supports precise combinations with and or operators. Ranked retrieval scores documents by relevance signals instead of exact matches.
+
+Term frequency and inverse document frequency weight common and rare words. Cosine similarity compares query vectors with document vectors in space models. Probabilistic models estimate likelihood that documents satisfy information needs.
+
+Web search adds link analysis, freshness, and user behavior signals. Snippets highlight query terms in result previews. Spell correction and query expansion recover from typos and vocabulary mismatch. Faceted search lets users filter by category or date.
+
+Evaluation metrics include precision, recall, and mean average precision. Human raters judge quality with guideline documents. Offline test collections such as benchmark corpora support reproducible research. Online experiments use A/B testing with careful traffic splitting.
+
+Enterprise search indexes emails, tickets, and internal wikis with access control. Desktop search tools monitor local files. Mobile assistants combine retrieval with speech recognition. Privacy preserving search limits logging and personalization when required by policy.

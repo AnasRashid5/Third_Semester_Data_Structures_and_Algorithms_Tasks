@@ -1,0 +1,9 @@
+Operating systems manage hardware resources for application programs. Kernels provide system calls for memory, processes, files, and devices. User space libraries wrap those calls with portable interfaces. Monolithic kernels embed drivers while microkernels isolate services for reliability.
+
+Processes are programs in execution with private virtual memory. Threads share address space and enable parallel work within a process. Schedulers allocate CPU time using priorities and time slices. Preemptive multitasking interrupts long tasks to preserve responsiveness.
+
+Virtual memory maps logical addresses to physical frames with paging. Demand paging loads pages on faults while replacement policies such as least recently used evict cold data. Copy-on-write optimizes process creation and fork semantics.
+
+File systems organize bytes into directories and files with metadata. Journaling protects metadata after crashes. Permissions and access control lists enforce security policies. Input and output devices communicate through drivers and interrupt handlers.
+
+Synchronization primitives include mutexes, semaphores, and condition variables. Deadlock prevention requires careful lock ordering. Containers and virtual machines isolate workloads on shared hardware. Cloud platforms orchestrate thousands of nodes using cluster managers.

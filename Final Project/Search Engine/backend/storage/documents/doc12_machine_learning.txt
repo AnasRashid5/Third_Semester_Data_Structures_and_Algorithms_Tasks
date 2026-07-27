@@ -1,0 +1,19 @@
+Machine learning is a branch of artificial intelligence that enables computers to learn from data without being explicitly programmed. Algorithms analyze patterns in training datasets and build mathematical models that can make predictions or decisions on new unseen inputs.
+
+Supervised learning uses labeled examples where each input is paired with the correct output. Regression models predict continuous numeric values such as house prices or temperature forecasts. Classification models assign categories to inputs such as spam detection or image recognition. Common supervised algorithms include linear regression, logistic regression, decision trees, random forests, and support vector machines.
+
+Unsupervised learning discovers hidden structure in data without labels. Clustering algorithms such as k-means and hierarchical clustering group similar data points together. Dimensionality reduction techniques like principal component analysis compress high-dimensional data while preserving important variance. Autoencoders learn compact representations using neural networks.
+
+Reinforcement learning trains agents to take actions in an environment to maximize cumulative rewards. The agent explores possible actions, receives feedback through reward signals, and gradually learns optimal policies. Deep reinforcement learning combined neural networks with this paradigm to achieve superhuman performance in games like chess and Go.
+
+Deep learning uses multi-layer artificial neural networks to learn hierarchical features automatically. Convolutional neural networks excel at image and video processing tasks. Recurrent neural networks and long short-term memory networks handle sequential data like text and speech. Transformer architectures with attention mechanisms revolutionized natural language processing.
+
+Gradient descent optimization iteratively adjusts model parameters to minimize a loss function measuring prediction error. Backpropagation computes gradients efficiently through the chain rule of calculus. Batch normalization, dropout regularization, and learning rate schedulers improve training stability and generalization.
+
+Transfer learning reuses models pretrained on large datasets as starting points for new tasks. Fine-tuning updates only the upper layers of a deep network while keeping lower layers frozen. Foundation models trained on massive corpora can be adapted with minimal labeled data for specialized domains.
+
+Evaluation metrics differ by task type. Accuracy, precision, recall, and F1-score measure classification quality. Mean absolute error and root mean squared error quantify regression performance. Area under the receiver operating characteristic curve summarizes discrimination ability across thresholds.
+
+Bias and fairness are critical concerns in machine learning. Models trained on unrepresentative datasets may discriminate against protected groups. Techniques like reweighting, adversarial debiasing, and fairness-aware optimization aim to reduce disparate impact. Model explainability tools help practitioners understand and audit decisions.
+
+Edge computing brings machine learning inference closer to data sources, reducing latency for real-time applications. Quantization and pruning compress models to run efficiently on mobile devices and embedded processors. Federated learning trains models across distributed clients without centralizing sensitive data.

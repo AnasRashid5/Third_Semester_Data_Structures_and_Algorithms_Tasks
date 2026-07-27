@@ -1,0 +1,19 @@
+Biology is the scientific study of life in all its forms, from the simplest single-celled organisms to the most complex ecosystems. It encompasses the structure, function, growth, evolution, distribution, and taxonomy of living things.
+
+Cell biology examines the fundamental unit of life. Prokaryotic cells lack a membrane-bound nucleus and include bacteria and archaea. Eukaryotic cells contain a nucleus housing DNA and membrane-bound organelles including mitochondria, which generate energy through cellular respiration, and the endoplasmic reticulum, which synthesizes proteins and lipids.
+
+DNA, deoxyribonucleic acid, encodes genetic information in sequences of four nucleotide bases: adenine, thymine, guanine, and cytosine. The double helix structure discovered by Watson, Crick, Franklin, and Wilkins revealed how genetic information is stored and replicated. RNA carries this information from the nucleus to ribosomes where proteins are assembled through translation.
+
+Genetics studies how traits are inherited across generations. Mendel's laws of segregation and independent assortment describe how alleles separate and recombine during reproduction. Dominant alleles mask the effect of recessive alleles. Mutations in DNA sequences can be beneficial, neutral, or harmful depending on context. Epigenetic modifications regulate gene expression without altering the underlying sequence.
+
+Evolution explains the diversity of life through the mechanism of natural selection. Individuals with heritable traits that improve survival and reproduction leave more offspring. Over generations, beneficial traits spread through populations. Speciation occurs when populations become reproductively isolated and diverge genetically. The fossil record and molecular phylogenetics together reconstruct the history of life on Earth.
+
+Ecology examines how organisms interact with each other and their physical environment. Populations of a species fluctuate based on birth rates, death rates, immigration, and emigration. Communities of interacting species form food webs where energy flows from producers through herbivores to predators. Ecosystems cycle nutrients through biological and chemical processes including photosynthesis, decomposition, and nitrogen fixation.
+
+Photosynthesis converts light energy into chemical energy stored in glucose. Chloroplasts in plant cells absorb sunlight through chlorophyll pigments and use that energy to combine carbon dioxide and water into sugar while releasing oxygen. The Calvin cycle fixes atmospheric carbon into organic molecules. Photosynthesis forms the base of most food chains and shapes the composition of Earth's atmosphere.
+
+Molecular biology investigates biological molecules and their interactions. Restriction enzymes cut DNA at specific sequences, enabling recombinant DNA technology. Polymerase chain reaction amplifies specific DNA sequences for analysis. CRISPR-Cas9 gene editing allows precise modification of DNA in living organisms, opening new possibilities in medicine and agriculture.
+
+Neuroscience studies the structure and function of the nervous system. Neurons transmit electrical signals called action potentials along axons and communicate through chemical neurotransmitters at synapses. Neural circuits process sensory information, coordinate movement, form memories, and generate behavior. Brain imaging techniques reveal the activity of different regions during perception and cognition.
+
+Immunology examines how the immune system defends the body against pathogens and cancer. Innate immunity provides immediate nonspecific responses including inflammation and fever. Adaptive immunity generates antigen-specific antibodies and T cell responses that remember past infections. Vaccines train the immune system to recognize pathogens without causing disease, one of the most cost-effective public health interventions ever developed.

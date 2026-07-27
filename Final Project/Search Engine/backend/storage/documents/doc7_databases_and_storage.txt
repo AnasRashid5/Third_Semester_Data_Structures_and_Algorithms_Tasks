@@ -1,0 +1,9 @@
+Database persist structured data for transactional and analytical workloads. Relational databases store rows in tables with schemas enforced by SQL engines. Primary keys, foreign keys, and indexes accelerate joins and lookups. Normalization reduces redundancy while denormalization can improve read performance.
+
+Structured query language supports selection, projection, filtering, grouping, and aggregation. Transactions provide atomicity, consistency, isolation, and durability through logging and locking strategies. Query optimizers choose execution plans based on statistics and cost models.
+
+NoSQL systems trade strict schemas for horizontal scalability. Document stores manage flexible JSON records. Key-value stores offer simple fast access patterns. Column-family databases optimize wide sparse tables. Graph databases represent relationships explicitly for traversal queries.
+
+Storage engines organize pages on disk and buffer hot data in memory. Write-ahead logs protect against crashes. B-trees and LSM-trees are popular indexing structures. Replication and sharding distribute load across clusters.
+
+Backup, recovery, and monitoring keep production systems reliable. Migrations evolve schemas without losing data. Connection pooling reduces overhead in application servers. Search indexes can complement databases when full-text relevance ranking is required.

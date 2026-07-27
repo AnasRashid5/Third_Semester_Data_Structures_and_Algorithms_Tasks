@@ -1,0 +1,7 @@
+Algorithms are step-by-step procedures for solving problems. Computer scientists study time complexity and space complexity to compare algorithms fairly. Big O notation describes how running time grows as input size increases. Common classes include constant, logarithmic, linear, linearithmic, quadratic, and exponential complexity.
+
+Sorting algorithms such as merge sort and quicksort appear in countless applications. Merge sort divides arrays recursively and merges sorted halves with stable performance. Quicksort picks pivots and partitions elements with excellent average-case behavior. Searching algorithms include linear search and binary search on sorted data.
+
+Graph algorithms power navigation, social networks, and recommendation systems. Breadth-first search explores layers while depth-first search dives deeply along paths. Dijkstra algorithm finds shortest paths in weighted graphs. Dynamic programming breaks problems into overlapping subproblems with optimal substructure.
+
+Greedy algorithms make locally optimal choices and sometimes produce global optima. Divide and conquer splits problems into independent subproblems. Backtracking explores possibilities and undoes choices when constraints fail. Randomized algorithms use probability to simplify design and improve expected performance.

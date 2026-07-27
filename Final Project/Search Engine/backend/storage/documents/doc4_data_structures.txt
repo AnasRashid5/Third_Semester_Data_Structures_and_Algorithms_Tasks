@@ -1,0 +1,9 @@
+Data structures organize information so programs can store and retrieve data efficiently. Arrays provide contiguous memory and constant-time indexing. Linked lists offer flexible insertion with sequential access patterns. Stacks follow last-in-first-out discipline while queues follow first-in-first-out discipline.
+
+Trees represent hierarchical relationships. Binary search trees support ordered operations when balanced. Heaps implement priority queues for scheduling and graph algorithms. Tries store strings by prefix and enable autocomplete features in search engines.
+
+Hash tables map keys to values with average constant-time lookup using hash functions and collision resolution. Open addressing and chaining are classic collision strategies. Sets and maps in modern languages often use hash tables internally.
+
+Graphs combine vertices and edges to model networks. Adjacency lists are memory efficient for sparse graphs while adjacency matrices help dense graphs. Union-find structures track connected components. Segment trees and fenwick trees answer range queries efficiently.
+
+Choosing the right data structure is central to systems design. Memory locality, cache performance, and algorithmic requirements all influence the decision. Persistent and immutable structures support safe concurrent access in functional programming environments.

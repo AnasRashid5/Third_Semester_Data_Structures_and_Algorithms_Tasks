@@ -1,0 +1,19 @@
+Cloud computing delivers computing resources such as servers, storage, databases, networking, software, and analytics over the internet on a pay-per-use basis. Organizations shift from owning physical data centers to renting capacity from cloud providers, converting capital expenditure into operational expenditure.
+
+Infrastructure as a service provides virtualized computing resources including virtual machines, block storage, and networking components. Users install and manage operating systems, middleware, and applications while the provider manages the physical hardware. Amazon Web Services, Microsoft Azure, and Google Cloud Platform are the dominant public cloud providers.
+
+Platform as a service abstracts the underlying infrastructure and provides a managed environment for developing, testing, and deploying applications. Developers upload code and configuration, and the platform handles scaling, patching, and load balancing automatically. This model accelerates development cycles and reduces operational overhead.
+
+Software as a service delivers fully managed applications accessible through web browsers or APIs. Users pay subscription fees to access email, collaboration tools, customer relationship management systems, and enterprise resource planning suites without installing software locally. The provider handles upgrades, security patches, and infrastructure maintenance.
+
+Virtualization is the foundational technology enabling cloud computing. Hypervisors partition physical servers into multiple isolated virtual machines, each with its own operating system. Container runtimes like Docker provide lightweight process isolation that shares a single operating system kernel, reducing overhead compared to full virtual machines.
+
+Container orchestration platforms such as Kubernetes automate deployment, scaling, and management of containerized applications. Pods group related containers that share network and storage resources. Services provide stable endpoints that route traffic to healthy pods. Horizontal pod autoscaling adjusts replica counts based on CPU utilization or custom metrics.
+
+Serverless computing further abstracts infrastructure by executing discrete functions in response to events. Developers write small stateless functions and pay only for actual invocation time measured in milliseconds. Cold starts introduce latency when functions initialize from idle state. Event-driven architectures connect serverless functions through message queues and event buses.
+
+Cloud storage services offer object storage, file storage, and archival tiers. Object storage systems store unstructured data as objects with metadata and unique identifiers, enabling virtually unlimited scalability. Content delivery networks cache objects at edge locations worldwide, reducing latency for geographically distributed users.
+
+Multi-cloud strategies distribute workloads across several providers to avoid vendor lock-in and improve resilience. Hybrid cloud architectures connect on-premises infrastructure with public cloud resources using dedicated connections or encrypted virtual private network tunnels. Governance policies enforce consistent security controls across environments.
+
+Cloud cost optimization involves right-sizing instances, using reserved capacity for predictable workloads, and leveraging spot or preemptible instances for fault-tolerant batch jobs. FinOps practices establish shared financial accountability between engineering and finance teams to track and reduce cloud spending continuously.

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ISSUE FIX: Added meta description for SEO – previously missing, which hurts
+         search engine indexing and results snippet quality. -->
+    <meta name="description" content="Googol – a lightning-fast search engine powered by a C++ inverted index and Trie autocomplete.">
+    <title>Googol - Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- ISSUE FIX: The stylesheet filename must match style.css exactly. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" tabindex="0">About</a>
+        <a href="#" tabindex="0">Settings</a>
+    </header>
+
+    <main id="main">
+        <h1 class="logo" aria-label="Googol">
+            <span>G</span><span>o</span><span>o</span><span>g</span><span>o</span><span>l</span>
+        </h1>
+
+        <div class="search-wrap">
+            <form class="search-box" id="searchForm" role="search">
+                <svg class="icon-search" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search Googol" autocomplete="off" aria-label="Search" aria-expanded="false" aria-controls="autocompleteList" role="combobox">
+                <button type="button" class="clear-btn" id="clearBtn" aria-label="Clear search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="autocomplete" id="autocomplete">
+                <ul id="autocompleteList" role="listbox"></ul>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button type="button" class="action-btn primary" id="searchBtn">Search Googol</button>
+            <!-- ISSUE FIX: Replaced the 'I'm Feeling Curious' button (which was a
+                 placeholder with no real purpose) with a History button that opens
+                 a slide-out panel showing the user's past search queries. -->
+            <button type="button" class="action-btn" id="historyBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 .49-3.76"></path>
+                </svg>
+                History
+            </button>
+        </div>
+
+        <!-- ISSUE FIX: Added history panel element. It is hidden by default and
+             toggled open/closed by the History button click handler in app.js. -->
+        <aside id="historyPanel" class="history-panel" aria-label="Search history" aria-hidden="true">
+            <div class="history-panel-header">
+                <span>Recent Searches</span>
+                <button type="button" id="historyCloseBtn" aria-label="Close history panel">&times;</button>
+            </div>
+            <ul id="historyList" class="history-list"></ul>
+            <p id="historyEmpty" class="history-empty">No searches yet.</p>
+        </aside>
+
+        <!-- ISSUE FIX: Modal overlay for viewing full document content. -->
+        <div id="docModal" class="doc-modal" aria-hidden="true">
+            <div class="doc-modal-content">
+                <div class="doc-modal-header">
+                    <h2 id="docModalTitle">Document Title</h2>
+                    <button type="button" id="docModalClose" aria-label="Close document">&times;</button>
+                </div>
+                <div class="doc-modal-body">
+                    <pre id="docModalText">Loading...</pre>
+                </div>
+            </div>
+        </div>
+
+        <section class="results" id="results" aria-live="polite">
+            <div class="results-meta" id="resultsMeta"></div>
+            <div id="resultsList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Help</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
